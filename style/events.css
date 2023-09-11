@@ -1,0 +1,32 @@
+
+.card
+{
+    border: none;
+}
+
+h1{
+    color: #00113F;
+}
+
+.events-container
+{
+    background: #f7f7f7;
+    max-width: 100vw;
+    padding-inline: 18rem;
+}
+
+.btn-primary{
+    background-color: #00113F;
+    border: 1px solid #00113F;
+}
+
+.bg-cyan
+{
+    background-color: aquamarine;
+}
+
+.events-heading
+{
+    font-weight: 600;
+    color: #00113F;
+}
