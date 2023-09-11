@@ -7,6 +7,13 @@
 :root {
     /* Color Style */
     --clr-primary: #00113F;
+    --clr-secondary: #7FFFD9;
+
+    --clr-1card: #00113F;
+    --clr-2card: #213673;
+    --clr-3card: #3653A5;
+
+    --clr-btn: #263F85;
 
 
     /* Font style */
@@ -21,22 +28,61 @@ body {
     font-family: var(--font-universal);
 }
 
-#navBar {
-    background: var(--clr-primary);
-    height: 10vh;
+/* Navigation Top */
+#nav-bar-top {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+    padding: 2rem 18rem 2rem 18rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.side-nav-left {
+    font-size: 16px;
+
+    & a {
+        color: white;
+        text-decoration: none;
+        padding-right: 3rem;
+    }
+
+}
+
+.side-nav-right {
+    font-size: 16px;
+
+
+    & a {
+        color: white;
+        text-decoration: none;
+        padding-left: 3rem;
+    }
+}
+
+/* Navigation bottom */
+#nav-bar-btm {
+    background: transparent;
     color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-inline: 20rem;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+    padding-inline: 18rem;
+    padding-block: 1rem 1rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.7);
+    width: 100vw;
+    z-index: 9999 !important;
 
     & h1 {
         color: white;
+        font-size: 32px;
 
         & span {
             font-size: 15px;
+            font-style: italic;
+            padding-left: 4.5rem;
+            position: relative;
+            bottom: 1.5rem;
         }
     }
 
@@ -49,22 +95,220 @@ body {
         display: inline-block;
     }
 
+
     & a {
         text-decoration: none;
         color: white;
         transition: 250ms;
 
-        &:hover {
-            color: red;
+        &:hover::after {
+            width: 100%;
         }
+    }
+
+    & a::after {
+        content: '';
+        background: white;
+        position: relative;
+        display: block;
+        width: 0;
+        height: 2px;
+        transition: 250ms;
     }
 }
 
-.heroSection {
-    background: rgba(0, 0, 0, 0.8);
-    width: 100vw;
-    height: 90vh;
+/* Hero Section */
+.hero-section {
+    max-width: 100vw;
+    height: 70vh;
+
+    & img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: -1;
+        
+    }
+    
+    & h1 {
+        padding: 5rem 18rem 0rem 18rem;
+        color: white;
+        font-size: 64px;
+        opacity: .9;
+
+        &:after {
+            content: '';
+            width: 138px;
+            height: 5px;;
+            background: var(--clr-secondary);
+            display: block; 
+            margin-top: 42px;
+        }
+    }
+
+    & p {
+        color: #FFF;
+        padding-inline: 18rem;
+        font-size: 24px;
+        width: 60%;
+        padding-top: 64px;
+        opacity: .85;
+        
+    }
+
+    & #shadow-overlay {
+        background: rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+    }
 }
+
+/* 3 Cards Column Section */
+.cards-container {
+     background: #f7f7f7;
+     max-width: 100vw;
+     height: 80vh;
+     padding-inline: 18rem;
+    
+}
+
+    .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+    
+     & .card {
+        background: var(--clr-1card);
+        border-radius: unset;
+        height: 400px;
+        position: relative;
+        bottom: 5rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        
+        & h1 {
+            font-size: 18px;
+            padding: 18px;
+            
+        }
+
+        & div {
+            width: 100%;
+            height: 50%;
+            background: grey;
+            
+        }
+
+        & p {
+            padding-inline: 38px;
+            padding-block: 20px 0;
+        }
+
+        & a {
+            color: white;
+            text-decoration: none;
+            transition: 250ms;
+            padding-inline: 38px 0;
+            padding-block: 0 20px;
+            
+
+            &:hover {
+            text-decoration: underline;
+            }
+        }
+     }
+
+     & .card-holder-2 {
+        background: var(--clr-2card);
+     }
+
+     & .card-holder-3 {
+        background: var(--clr-3card);
+     }
+}
+
+/* VocTech Has Section */
+.academy-has {
+     
+    & h1 {
+        text-align: center;
+        padding-block: 0 38px;
+    }
+}
+
+.column-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+    gap: 7rem;
+}
+
+.column > div {
+    margin-bottom: 28px;
+}
+
+/* Advertisement Section */
+
+.advert-container {
+    background-image: url("../imgs/CTA-bg.png");
+    max-width: 100vw;
+    height: 70vh;
+    background-size: cover;
+    position: relative;
+    color: white;
+    z-index: -1;
+    padding-right: 18rem;
+
+    & .advert-content {
+        z-index: 2;
+        width: 600px;
+        position: absolute;
+        inset: 30% 0 0 50%;
+        
+    }
+}
+
+.advert-container::after {
+    content: '';
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(270deg, rgba(92, 42, 42, 0.80) 0.23%, rgba(0, 0, 0, 0.00) 98.99%);
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+}
+
+.advert-content button {
+
+        padding: 16px 48px;
+        outline: none;
+        border: 0;
+        background: var(--clr-btn);
+        color: white;
+        transition: 250ms;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

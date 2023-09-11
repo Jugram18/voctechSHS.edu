@@ -3,17 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Partial</title>
+    <title>Home Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
 
-    <nav id="navBar" class="container-fluid row">
-        <h1 class="vocTech-logo col-md-6">Voctech Academy<br />
+<!-- Nav top -->
+    <nav id="nav-bar-top">
+        <div class="side-nav-left">
+            <a href="#">ACADEMICS </a>
+            <a href="#">ADMISSION </a>
+            <a href="#">STUDENT LIFE </a>
+            <a href="#">RESEARCH </a>
+            <a href="#">ALUMNI </a>
+        </div>
+
+        <div class="side-nav-right">
+            <a href="#"> <span><img src="#" alt="email"></span>voctechofficial@gmail.com </a>
+            <a href="#"><span><img src="#" alt="phone"></span>(032) 123 - 4567</a>
+        </div>
+    </nav>
+
+<!-- Nav bottom -->
+    <nav id="nav-bar-btm">
+        <h1 class="vocTech-logo"> <img src="imgs/VocTech Emblem.png" alt=""> VocTech Academy<br />
          <span>Senior High School</span></h1>
-        <ul class="col-md-6">
+
+        <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Page</a></li>
             <li><a href="#">Courses</a></li>
@@ -23,9 +41,82 @@
         </ul>
     </nav>
     
-    <section class="heroSection" aria-label="">
+<!-- Hero Section-->
+    <section class="hero-section">
+        <img src="imgs/hero-bg.png" class="img-fluid" alt="">
+        <h1>BUILDING SKILLS FOR <br> A BRIGHT FUTURE</h1>
+        <p>“Our Mission is to Lorem ipsum dolor sit amet consectetur. Elementum consectetur amet suscipit utpellentesque feugiat sit vitae.”</p>
 
+        <div id="shadow-overlay"></div>
     </section>
+
+<!-- 3 Cards Column Section -->
+    <section class="cards-container">
+
+        <div class="cards-grid">
+
+        <div class="card-holder-1 card">
+            <h1 class="header text-center"> <img src="#" alt="Icon">Admission</h1>
+            <div class="img-wrapper"></div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, unde? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, animi! Consequatur itaque quo autem id.</p>
+            <a href="">Learn More &#8594;</a>
+        </div>
+
+        <div class="card-holder-2 card">
+            <h1 class="header text-center"> <img src="#" alt="Icon">Academics</h1>
+            <div class="img-wrapper"></div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, unde? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, animi! Consequatur itaque quo autem id.</p>
+            <a href="">Learn More &#8594;</a>
+        </div>
+
+        <div class="card-holder-3 card">
+            <h1 class="header text-center"> <img src="#" alt="Icon">Career</h1>
+            <div class="img-wrapper"></div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, unde? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor tempora et nesciunt repudiandae sunt veniam.</p>
+            <a href="">Learn More &#8594;</a>
+        </div>
+        </div>
+
+<!-- VocTech Academy Has Section -->
+        <div class="academy-has">
+
+            <h1>VocTech Academy Has</h1>
+
+            <div class="column-grid">     
+            <div class="column1 column">
+                <div><img src="#" alt="icon"><h2>National Rewards</h2></div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam omnis iure tempora. Dolorem, id vel? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, ipsum!</p>
+            </div>
+            
+            <div class="column2 column">
+                <div><img src="#" alt="icon"><h2>Training</h2></div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam omnis iure tempora. Dolorem, id vel? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, ipsum!</p>
+            </div>
+
+            <div class="column3 column">
+                <div><img src="#" alt="icon"><h2>Many Courses</h2></div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam omnis iure tempora. Dolorem, id vel? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, ipsum!</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Advertisement Section  -->
+    <div class="advert-container">
+        
+        <div class="advert-content">
+        <h1>VocTech Offers 100% Free Tuition</h1>
+        <h4>No Misicellaneous Fee, No Entrance Fee</h4>
+        <br><br>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti quo esse dolores sunt blanditiis placeat rerum ipsam at quos quam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae commodi quod quisquam aliquid voluptatum magni dolores dolore.</p>
+        <button class="button" type="button">Apply for Admission</button>
+        </div>
+        
+    </div>
+
+
+    
     
 </body>
 </html>
