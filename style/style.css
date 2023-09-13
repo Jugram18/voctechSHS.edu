@@ -8,10 +8,12 @@
     /* Color Style */
     --clr-primary: #00113F;
     --clr-secondary: #7FFFD9;
+    --clr-tertiary: #3B58A7;
 
     --clr-1card: #00113F;
     --clr-2card: #213673;
     --clr-3card: #3653A5;
+    
 
     --clr-btn: #263F85;
 
@@ -93,6 +95,7 @@ body {
     & li {
         padding-inline: 20px;
         display: inline-block;
+        
     }
 
 
@@ -125,7 +128,7 @@ body {
     & img {
         position: absolute;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         top: 0;
         z-index: -1;
         
@@ -160,7 +163,7 @@ body {
     & #shadow-overlay {
         background: rgba(0, 0, 0, 0.6);
         width: 100%;
-        height: 100%;
+        height: 100vh;
         position: absolute;
         z-index: -1;
         top: 0;
@@ -171,7 +174,7 @@ body {
 .cards-container {
      background: #f7f7f7;
      max-width: 100vw;
-     height: 80vh;
+     min-height: 80vh;
      padding-inline: 18rem;
     
 }
@@ -196,10 +199,10 @@ body {
             
         }
 
-        & div {
+        & .img-wrapper {
             width: 100%;
             height: 50%;
-            background: grey;
+            background: white;
             
         }
 
@@ -233,7 +236,7 @@ body {
 
 /* VocTech Has Section */
 .academy-has {
-     
+
     & h1 {
         text-align: center;
         padding-block: 0 38px;
@@ -251,7 +254,6 @@ body {
 }
 
 /* Advertisement Section */
-
 .advert-container {
     background-image: url("../imgs/CTA-bg.png");
     max-width: 100vw;
@@ -261,6 +263,7 @@ body {
     color: white;
     z-index: -1;
     padding-right: 18rem;
+    margin-bottom: 80px;
 
     & .advert-content {
         z-index: 2;
@@ -282,14 +285,292 @@ body {
 }
 
 .advert-content button {
-
-        padding: 16px 48px;
-        outline: none;
-        border: 0;
-        background: var(--clr-btn);
-        color: white;
-        transition: 250ms;
+    padding: 16px 48px;
+    outline: none;
+    border: 0;
+    background: var(--clr-btn);
+    color: white;
+    transition: 250ms;
+    cursor: pointer; 
 }
+
+/* News & Update Section */
+#news-container {
+    max-width: 100vw;
+    padding: 0 18rem 0 18rem;
+    min-height: 10vh;
+}
+
+.update {
+
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    gap: 10rem;
+    min-height: 75vh;
+
+    & .subject {
+        height: 400px;
+
+        & h1 {
+        font-size: 24px;
+
+        &::after {
+           content:'';
+           background: black;
+           position: absolute;
+           display: block;
+           width: 350px;
+           height: 3px;
+           margin-top: 10px;
+
+        }}
+    }
+}
+
+.subject-1 .success-story {
+    margin-top: 3rem;
+    width: 70%;
+    height: 500px;
+    background: red;
+}
+
+.news-pack {
+    display: flex;    
+
+    & img {
+    width: 200px;
+    height: 100px;
+    background: black;}
+
+    & .news-content :nth-child(2) {
+    font-weight: bold;
+    }
+
+    & .news-content :nth-child(1) {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.8);
+    }
+}
+
+/* Read The Blog */
+.next-page a {
+    text-decoration: none;
+    color: var(--clr-1card);
+    font-weight: 550;
+}
+
+/* 4 Column Section */
+.column-container {
+    background: gray;
+    max-width: 100vw;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 4fr));
+    text-align: center;
+    overflow: hidden;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.column-container .column-child {
+    padding-inline: 20px;
+    position: relative;
+}
+
+.column-child h1 {
+    position: relative;
+}
+
+.column-child h1::after {
+    content: '';
+    width: 200px;
+    height: 5px;
+    background: var(--clr-secondary);
+    display: block;
+    position: absolute;
+    inset: 0;
+    margin: 130px auto;
+}
+
+.column-parent-1 {
+   display: flex;
+   align-items: center;
+   background-image: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, .8), transparent), url("../imgs/Admission-img.png");
+   background-size: cover;
+}
+
+.column-parent-2 {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, .8), transparent), url("../imgs/Programs-img.png");
+    background-size: cover;
+ }
+
+ .column-parent-3 {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, .8), transparent), url("../imgs/Clubs\ &\ Activities-img.png");
+    background-size: cover;
+ }
+
+ .column-parent-4 {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .8), rgba(0, 0, 0, .8), transparent), url("../imgs/Training-img.png");
+    background-size: cover;
+ }
+
+ /* Events Section */
+ .events-container {
+    margin-top: 80px;
+    padding-inline: 18rem;
+    max-width: 100vw;
+    height: 70vh;
+    background-color: #f7f7f7;
+    padding-bottom: 80px;
+ }
+
+ .events-header::after {
+    content: '';
+    background: black;
+    position: absolute;
+    display: block;
+    width: 70%;
+    height: 4px;
+
+ }
+
+ .events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+    gap: 3rem;
+    margin-block: 60px;
+ }
+
+ .e-content {
+    display: flex;
+    gap: 20px;
+ }
+
+ .e-content .e-date h1 {
+    font-size: 68px;
+    text-align: center;
+ }
+
+ .e-content .e-date h1 span {
+    color: var(--clr-tertiary);
+ }
+
+ .e-grid img {
+    width: 100%;
+    height: 200px;
+    background: gray;
+    margin-block: 0 20px;
+ }
+
+ .e-headline h3 {
+    color: var(--clr-tertiary);
+ }
+
+ .more-events-link a {
+    text-decoration: none;
+    color: var(--clr-tertiary);
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 100px; 
+ }
+
+ /* CTA Section */
+ .cta-container {
+    max-width: 100vw;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: repeat(2, 40% 60%);
+    gap: 5rem;
+ }
+
+ .cta-wrapper-1 {
+    background-color: rgb(149, 149, 250);
+    justify-content: center;
+    align-items: center;
+
+    & h1 {
+        font-size: 56px;
+        color: white;
+        opacity: .8;
+    }
+
+    & div {
+        text-align: left;
+
+    & a {
+        font-size: 24px;
+        opacity: .8;
+    }
+    }
+ }
+
+ .q-links-wrapper {
+
+    & a {
+        text-decoration: none;
+    }
+ }
+
+ .cta-wrapper-2 {
+    padding: 100px 18rem 200px 100px;
+
+    & .cta-heading {
+
+        & h1 {
+            font-size: 56px;
+        }
+
+        & p {
+            font-size: 24px;
+        }
+    }
+ }
+
+ .cta-content {
+
+    position: relative;
+
+    & a {
+        background: var(--clr-primary);
+        padding: 16px 64px;
+        color: white;
+        text-decoration: none;
+        position: relative;
+        top: 28px;
+        transition: 250ms;
+        font-size: 24px;
+    }
+    & a:hover {
+        opacity: .8;
+    }
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
