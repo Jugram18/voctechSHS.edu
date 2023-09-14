@@ -35,6 +35,7 @@ html, body {
     position: fixed;
     transition: 300ms;
     z-index: 999999 !important;
+    max-width: 100vw;
 
 }
 
@@ -48,14 +49,15 @@ html, body {
 }
 
 #nav-bar-top {
-    padding: 2rem 18rem 2rem 18rem;
+    padding: 1rem 18rem 1rem 18rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .side-nav-left {
-    font-size: 16px;
+    font-size: 15px;
 
     & a {
         color: white;
@@ -116,7 +118,7 @@ html, body {
         & span {
             font-size: 15px;
             font-style: italic;
-            padding-left: 4.5rem;
+            padding-left: 4rem;
             position: relative;
             bottom: 1.5rem;
         }
@@ -686,7 +688,7 @@ html, body {
  .footer-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 4fr));
-    gap: 1rem;
+    gap: 2rem;
  }
 
  .footer-1 div .f-header {
@@ -737,7 +739,7 @@ html, body {
  .footer-5 {
     display: flex;
     justify-content: space-between;
-    border-top: 2px solid white;
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
     padding-block: 30px 10px;
 
     & .f-copyright {
