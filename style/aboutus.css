@@ -255,7 +255,7 @@ html, body {
     }
 
     & p {
-    padding-block: 0 25px;
+    padding-block: 0 48px;
  }
  }
 
@@ -269,7 +269,7 @@ html, body {
 
     & p {
         opacity: .8;
-        padding-block: 0 25px;
+        padding-block: 0 18px;
     }
 
     & a {
@@ -311,4 +311,3 @@ html, body {
         opacity: 1;
     }
  }
-

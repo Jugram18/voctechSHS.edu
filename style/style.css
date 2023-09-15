@@ -675,8 +675,8 @@ html, body {
     }
  }
 
- /* Footer Section */
- .footer-container {
+/* Footer Section */
+.footer-container {
     max-width: 100vw;
     min-height: 539px;
     background: var(--clr-primary);
@@ -708,7 +708,7 @@ html, body {
     }
 
     & p {
-    padding-block: 0 25px;
+    padding-block: 0 48px;
  }
  }
 
@@ -722,7 +722,7 @@ html, body {
 
     & p {
         opacity: .8;
-        padding-block: 0 25px;
+        padding-block: 0 18px;
     }
 
     & a {
