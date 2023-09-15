@@ -117,7 +117,7 @@ html, body {
 
  /* Career Hero Section */
 .career-container {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent, rgba(0, 0, 0, 0.9)), url("../imgs/admission-bg.png");
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent, rgba(0, 0, 0, 0.9)), url("../imgs/career-bg.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -207,62 +207,6 @@ html, body {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Footer Section */
 .footer-container {
