@@ -31,6 +31,7 @@ html, body {
 .navbar-container {
     position: fixed;
     z-index: 99999 !important;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.8));
 }
 
 #nav-bar-top {

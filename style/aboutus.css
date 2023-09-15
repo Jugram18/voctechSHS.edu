@@ -31,6 +31,7 @@ html, body {
 .navbar-container {
     position: fixed;
     z-index: 99999 !important;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.8));
 }
 
 #nav-bar-top {
@@ -126,11 +127,19 @@ html, body {
     color: white;
 }
 
+.abt-container .a-header {
+    font-size: 100px;
+}
+
 /* History Section */
 .h-container {
     padding:  4rem 18rem;
     max-width: 100vw;
     min-height: 80vh;
+}
+
+.h-container .h-home {
+    opacity: .6;
 }
 
 .h-grid {
@@ -156,12 +165,12 @@ html, body {
 }
 
 /* VMG section */
-
 .vmg-container {
     max-width: 100vw;
     padding-inline: 18rem;
     height: 50vh;
-    background: grey;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../imgs/vmg-bg.png");
+    color: white;
 }
 
 .vmg-grid {
@@ -171,49 +180,47 @@ html, body {
     gap: 10rem;
 }
 
+/* Campus, Graduation info Section */
+.a-col2-container {
+    max-width: 100vw;
+    min-height: 100vh;
+}
 
+.a-item {
+    display: flex;
+    align-items: center;
+    gap: 18rem;
+}
 
+.a-item  img {
+    width: 100%;
+}
 
+.a-campus-wrapper {
+    padding-left: 18rem;
+}
 
+.a-graduation-wrapper {
+    padding-right: 18rem;
+}
 
+.a-training-wrapper {
+    padding-left: 18rem;
+}
 
+.a-info h1 {
+    padding-block: 0 28px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Partnership Section */
+.p-container {
+    max-width: 100vw;
+    min-height: 50vh;
+    text-align: center;
+    padding-top: 80px;
+    background: var(--clr-3card);
+    color: white;
+}
 
 /* Footer Section */
 .footer-container {
