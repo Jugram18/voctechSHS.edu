@@ -63,6 +63,7 @@ html, body {
         text-decoration: none;
         padding-right: 3rem;
         position: relative;
+        text-align: center;
     }
 
     & a:after {
@@ -155,6 +156,10 @@ html, body {
 
 }
 
+#nav-bar-btm span {
+    display: none;
+}
+
 #nav-bar-btm::before {
     content: '';
     height: .5px;
@@ -173,11 +178,12 @@ html, body {
 .hero-section {
     max-width: 100vw;
     height: 100vh;
+    position: relative;
 
     & img {
         position: absolute;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         top: 0;
         z-index: -1;
         
@@ -341,7 +347,7 @@ html, body {
 
 .advert-container .advert {
     z-index: 2;
-    width: 600px;
+    max-width: 600px;
     position: absolute;
     inset: 30% 0 0 50%;
 } 
@@ -770,22 +776,26 @@ html, body {
     }
  }
 
+
+
+
+
+
+
+
  /* Mobile Layout */
 
- @media (max-width: 1650px) {
+ @media screen and (min-width: 1024px) {
 
-/* Navigation Top */
-    #nav-bar-top {
-        padding-inline: 12rem;
-    }
-
+/* Navigation Top
+  
     .side-nav-left {
         font-size: 12px;
     }
 
 /* Navigation bottom */
     
-    #nav-bar-btm {
+    /* #nav-bar-btm {
         padding-inline: 12rem;
     }
 
@@ -800,7 +810,7 @@ html, body {
     }
 
 /* Hero Section */
-.hero-section h1 {
+/* .hero-section h1 {
     padding-inline: 12rem;
 }
 
@@ -809,17 +819,189 @@ html, body {
 }
 
 /* 3 Cards column Section */
-.cards-container {
+/* .cards-container {
     padding-inline: 12rem;
 }
 
 /* VocTech Academy Has */
 
-.column-grid {
+/* .column-grid {
     gap: 2rem;
 }
 
+/* News & Update Section */
+    /* #news-container {
+        padding-inline: 12rem;
+    }  */
  }
+
+ /* Tablet Layout */
+
+ @media screen and (min-width: 768px) and (max-width: 1023px) {
+
+/* Navigation Section */
+    #nav-bar-top {
+        padding-inline: 1rem;
+        justify-content: start;
+    }
+
+    .side-nav-left {
+        font-size: 12px; 
+    }
+
+    .side-nav-left a {
+        padding-right: 5rem;
+    }
+
+    .side-nav-right {
+        font-size: 12px;
+        margin-top: 2rem;
+    }
+
+    .side-nav-right a {
+        padding-left: 0;
+    }
+
+    #nav-bar-btm {
+        padding-inline: 1rem;
+    }
+
+    #nav-bar-btm a {
+        font-size: 12px;
+    }
+
+    #nav-bar-btm li {
+        padding-inline: 10px;
+    }
+
+    #nav-bar-btm::before {
+        inset: 0 1rem 0 1rem;
+    }
+
+    /* Hero Section */
+
+    .hero-section h1 {
+        padding-inline: 1rem;
+    }
+
+    .hero-section p {
+        padding-inline: 1rem;
+    }
+
+    /* 3 Cards Column Section */
+    
+    .cards-container {
+        padding-inline: 1rem;
+    }
+
+    /* Advertisement Section */
+ }
+
+  /* Mobile Layout */
+
+@media  screen and (max-width: 767px) {
+
+/* Navigation Mobile Layout */
+    #nav-container {
+        background: var(--clr-primary);
+    }
+
+    #nav-bar-top {
+        padding-inline: 1rem;
+        flex-direction: column;
+    }
+
+    .side-nav-left {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .side-nav-right {
+        display: none;
+    }
+    
+    #nav-bar-btm {
+        flex-direction: column;
+        padding-inline: 1rem;
+        justify-content: start;
+        align-items: start;
+        position: relative;
+    }
+
+    #nav-bar-btm h1 {
+        font-size: 18px;
+    }
+
+    #nav-bar-btm li {
+        display: block;
+    }
+
+    ul {
+        background: var(--clr-primary);
+        position: absolute;
+        right: -12rem;
+        padding: 40px;
+        top: 4rem;
+        transition: 250ms;
+    }
+
+    ul li {
+        padding-top: 1rem;
+    }
+
+    #nav-bar-btm span {
+        display: block;
+        position: absolute;
+        font-size: 2rem;
+        right: 2rem;
+        bottom: 1rem;
+    }
+
+    #nav-bar-btm #menu-exit {
+        opacity: 0;
+    }
+
+/* Hero Mobile Layout */ 
+.hero-section h1 {
+    padding-inline: 1rem;
+    font-size: 38px;
+}
+
+.hero-section p {
+    padding-inline: 1rem;
+}
+
+/* Cards Mobile Section */ 
+.cards-container {
+    padding-inline: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* News & Update Section */
+#news-container {
+    padding-inline: 1rem;
+}
+
+}
+
 
 
  

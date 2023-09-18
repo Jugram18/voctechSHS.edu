@@ -37,8 +37,10 @@
         <h1 class="vocTech-logo"> <img src="imgs/VocTech Emblem.png" alt=""> VocTech Academy<br />
          <span>Senior High School</span></h1>
          </div>
+         <span id="menu-bar"><i class="bi bi-list"></i></span>
+         <span id="menu-exit"><i class="bi bi-x"></i></span>
 
-        <ul>
+        <ul id="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="aboutus.html">About</a></li>
             <li><a href="academics.html">Courses</a></li>
@@ -64,6 +66,19 @@ window.onscroll = function () {
         nav.classList.remove("nav-colored");
     }
 };
+
+const menu = document.getElementById('menu');
+const menuBar = document.getElementById('menu-bar');
+const menuExit = document.getElementById('menu-exit');
+
+menuBar.onclick = function openMenu() {
+
+    if (menu.style.right == "-12rem") {
+        menu.style.right = "0";
+    } else {
+        menu.style.right = "-12rem";
+    }
+}
 
 </script>
 
