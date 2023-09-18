@@ -1,0 +1,156 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    /* Color Style */
+    --clr-primary: #00113F;
+    --clr-primary-deep: #000d31;
+    --clr-secondary: #7FFFD9;
+    --clr-tertiary: #3B58A7;
+
+    --clr-1card: #00113F;
+    --clr-2card: #213673;
+    --clr-3card: #3653A5;
+    
+
+    --clr-btn: #263F85;
+
+    /* Font style */
+    --font-universal: tahoma, sans-serif;
+}
+
+html, body {
+    position: relative;
+    overflow-x: hidden;
+    font-family: var(--font-universal);
+}
+
+ /* Events Hero Section */
+ .event-container {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent, rgba(0, 0, 0, 0.9)), url("../imgs/events-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 100vw;
+    height: 100vh;
+    padding: 0 18rem 6rem;
+    color: white;
+}
+
+.event-container .event-header {
+    font-size: 100px;
+    font-weight: bold;
+}
+
+/* The Events */
+
+.eventpage-container {
+    max-width: 100vw;
+    min-height: 100vh;
+    padding: 4rem 18rem;
+}
+
+.event-grid-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    & a {
+        color: white;
+        text-decoration: none;
+        padding: 16px 32px;
+        background: var(--clr-primary);
+        transition: 250ms;
+    }
+
+    & a:hover {
+        background: var(--clr-2card);
+    }
+
+    & h1 {
+        font-weight: bold;
+        color: var(--clr-primary);
+    }
+}
+
+.event-img-holder {
+    background: blue;
+    width: 100%;
+}
+
+.event-img-holder img {
+    width: 100%;
+}
+
+.event-head {
+    color: var(--clr-primary);
+
+    & a {
+        text-decoration: none;
+    }
+}
+
+.event-month {
+    position: relative;
+
+    & p {
+        font-size: 24px;
+    }
+}
+
+.event-month::after {
+    content: '';
+    background: var(--clr-primary);
+    width: 1100px;
+    height: 2px;
+    position: absolute;
+    display: block;
+    inset: 0 0 0 13rem;
+    margin: auto;
+}
+
+.next-prev-container a {
+    text-decoration: none;
+    color: var(--clr-primary);
+    transition: 250ms;
+}
+
+.next-prev-container a:hover {
+    opacity: .7;
+}
+
+.event-calendar a {
+    padding: 16px 32px;
+    background: var(--clr-primary);
+    color: white;
+    text-decoration: none;
+    transition: 250ms;
+}
+
+.event-calendar a:hover {
+    background: var(--clr-2card);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
