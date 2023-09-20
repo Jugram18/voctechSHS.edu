@@ -841,6 +841,10 @@ html p, a {
  @media screen and (min-width: 1024px) and (max-width: 1650px) {
 
 /* Navigation Desktop Layout */
+html, body {
+    position: relative;
+    overflow-x: hidden;
+}
 
 #nav-bar-top {
     padding-inline: 8rem;
@@ -1033,6 +1037,11 @@ html p, a {
  /* Tablet Layout----------------------- */
  @media screen and (min-width: 768px) and (max-width: 1023px) {
 
+    html, body {
+        position: relative;
+        overflow-x: hidden;
+    }
+
 /* Navigation Section */
     #nav-bar-top {
         padding-inline: 1rem;
@@ -1042,6 +1051,7 @@ html p, a {
     .side-nav-left {
         font-size: 12px; 
     }
+    
 
     .side-nav-left a {
         padding-right: 5rem;
@@ -1050,6 +1060,10 @@ html p, a {
     .side-nav-right {
         font-size: 12px;
         margin-top: 2rem;
+    }
+
+    .side-nav-right .bi-telephone-fill {
+        padding-left: 20px;
     }
 
     .side-nav-right a {
@@ -1210,12 +1224,15 @@ html p, a {
         text-align: center;
         justify-content: center;
     }
-
  }
-
 
 /* Mobile Layout ------------------------------- */
 @media  screen and (max-width: 767px) {
+
+    html, body {
+        position: relative;
+        overflow-x: hidden;
+    }
 
     html > :hover {
         all: unset;
