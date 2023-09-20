@@ -19,7 +19,8 @@
     --clr-btn: #263F85;
 
     /* Font style */
-    --font-universal: tahoma, sans-serif;
+    --font-universal: Trebuchet MS, sans-serif;
+    --font-paragraph: Verdana;
 }
 
 html, body {
@@ -29,6 +30,16 @@ html, body {
     overflow-x: hidden;
     font-family: var(--font-universal);
 }
+
+html h1,h3,h4 {
+    font-family: var(--font-universal);
+    font-weight: bold;
+}
+
+html p, a {
+    font-family: var(--font-paragraph);
+}
+
 
 /* Navigation Top */
 
@@ -187,20 +198,21 @@ html, body {
     max-width: 100vw;
     height: 100vh;
     position: relative;
-
+/* 
     & img {
         position: absolute;
         width: 100%;
         height: 100%;
         top: 0;
         z-index: -1;
-    }
-    
+    } */
+  
     & h1 {
         padding: 18rem 18rem 0rem 18rem;
         color: white;
         font-size: 64px;
         opacity: .9;
+        font-weight: bold;
 
         &::after {
             content: '';
@@ -215,11 +227,10 @@ html, body {
     & p {
         color: #FFF;
         padding-inline: 18rem;
-        font-size: 24px;
+        font-size: 20px;
         width: 60%;
         padding-top: 64px;
         opacity: .85;
-        
     }
 
     & #shadow-overlay {
@@ -230,6 +241,15 @@ html, body {
         z-index: -1;
         top: 0;
     }
+}
+
+.hero-section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -2;
 }
 
 /* 3 Cards Column Section */
@@ -290,6 +310,11 @@ html, body {
      & .card-holder-3 {
         background: var(--clr-3card);
         flex-grow: 1;
+     }
+
+     & a:hover {
+        transform: translateX(5px);
+        color: var(--clr-secondary);
      }
 }
 
@@ -406,6 +431,7 @@ html, body {
 
         & h1 {
         font-size: 24px;
+        color: var(--clr-primary);
 
         &::after {
            content:'';
@@ -528,6 +554,10 @@ html, body {
     min-height: 70vh;
     background-color: #f2f2f2;
     padding-block: 80px;
+ }
+
+ .events-header {
+    color: var(--clr-primary);
  }
 
  .events-header::after {
@@ -674,6 +704,7 @@ html, body {
 
         & h1 {
             font-size: 56px;
+            color: var(--clr-primary);
         }
 
         & p {
@@ -1076,7 +1107,7 @@ html, body {
 
     #news-container {
         padding-inline: 1rem;
-        height: 210vh;
+        min-height: 170vh;
     }
 
     .subject-2 {
@@ -1185,6 +1216,10 @@ html, body {
 
 /* Mobile Layout ------------------------------- */
 @media  screen and (max-width: 767px) {
+
+    html > :hover {
+        all: unset;
+    }
 
 /* Navigation Mobile Layout */
     #nav-bar-top {
