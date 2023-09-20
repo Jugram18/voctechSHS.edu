@@ -34,7 +34,7 @@
 <!-- Nav bottom -->
     <nav id="nav-bar-btm">
         <div class="main-logo" onclick="location.href='index.html'">
-        <h1 class="vocTech-logo"> <img src="imgs/VocTech Emblem.png" alt=""> VocTech Academy<br />
+        <h1 class="vocTech-logo"> <img src="imgs/VocTech Emblem.png" alt=""> VocTech Academy <br />
          <span class="sub-txt">Senior High School</span></h1>
          </div>
          <span id="menu-bar" class="menu-icon"><i class="bi bi-list"></i></span>
@@ -171,6 +171,7 @@ menuExit.onclick = function closeMenu() {
 
 <!-- News & Update Section -->
 <div id="news-container">
+    
     <video src="videos/School-tour.mp4" width="100%" height="500px" controls></video>
 
     <div class="update-grid mt-5">
@@ -183,7 +184,7 @@ menuExit.onclick = function closeMenu() {
         <div class="subject-2 subject d-flex flex-column">
             <h1>School News & Updates</h1>
 
-            <div class="container">
+            <div class="container-news">
             <div class="news-pack mb-3 mt-5">
                 <img onclick="location.href='#'" src="imgs/News-1.png" alt="">
 
@@ -216,7 +217,7 @@ menuExit.onclick = function closeMenu() {
                 <p onclick="location.href='#'" class="headline">China invaded Taiwan launched its first missiles in Taipei shores</p></div>
             </div>
 
-            <div class="next-page"> <a href="#">Read The Blog</a></div>
+            <div class="next-page"> <a href="#">More News & Updates</a></div>
 
         </div>
         </div>
@@ -226,28 +227,28 @@ menuExit.onclick = function closeMenu() {
 <!-- 4 Column Section -->
 <section class="column-container">
 
-    <div class="column-parent-1">
+    <div class="column-parent-1 py-5">
     <div class="column-1 column-child">
         <h1 class="my-5 py-5">Admission</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam atque optio, neque error minima deleniti.</p>
     </div>
     </div>
 
-    <div class="column-parent-2">
+    <div class="column-parent-2 py-5">
     <div class="column-2 column-child">
         <h1 class="my-5 py-5">Programs</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam atque optio, neque error minima deleniti.</p>
     </div>
     </div>
 
-    <div class="column-parent-3">
+    <div class="column-parent-3 py-5">
     <div class="column-3 column-child">
-        <h1 class="my-5 py-5">Club & Activities</h1>
+        <h1 class="my-5 py-5">Activities</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam atque optio, neque error minima deleniti.</p>
     </div>
     </div>
     
-    <div class="column-parent-4">
+    <div class="column-parent-4 py-5">
     <div class="column-4 column-child">
         <h1 class="my-5 py-5">Training</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam atque optio, neque error minima deleniti.</p>
@@ -305,7 +306,7 @@ menuExit.onclick = function closeMenu() {
                 </div>
         </div>
 
-        <div class="more-events-link"><a href="#"> View All Events</a></div>
+        <div class="more-events-link"><a href="#"> View All Events <i class="bi bi-chevron-double-right"></i></a></div>
 </section>
 
 <!-- CTA section -->
@@ -337,7 +338,9 @@ menuExit.onclick = function closeMenu() {
             <br>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae, tempora maiores. Officia aliquam accusantium doloribus similique, illum quod doloremque quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit adipisci numquam. </p>
 
-            <a href="#">Apply Now!</a>
+            <div class="cta-btn">
+                <a href="#">Apply Now!</a>
+            </div>
         </div>
 
     </div>
@@ -368,7 +371,7 @@ menuExit.onclick = function closeMenu() {
             <p><a href="#">Academic</a></p>
             <p><a href="#">Planning & Administration</a></p>
             <p><a href="#">Campus Safety</a></p>
-            <p><a href="#">Office of the President</a></p>
+            <p><a href="#">Office of president</a></p>
             <p><a href="#">Faulty Services</a></p>
             <p><a href="#">Admin Office</a></p>
             </div>
@@ -468,7 +471,7 @@ menuExit.onclick = function closeMenu() {
     const accordion2 = document.getElementById('f-head-wrapper-2');
     const accordion3 = document.getElementById('f-head-wrapper-3');
 
-// Collapse 3
+// Collapse 1
 
     chevs1.onclick = function open() {
 
@@ -527,7 +530,6 @@ menuExit.onclick = function closeMenu() {
         }   else {
             chevs3.style.rotate = "0deg";
         }
-
     }
 
 </script>
