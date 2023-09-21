@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link rel="stylesheet" href="style/news.css">
-    <link rel="stylesheet" href="style/academics.css">
+    <link rel="stylesheet" href="style/style.css">
     <title>News Page</title>
 </head>
 <body>
@@ -35,26 +35,72 @@
 <!-- Nav bottom -->
     <nav id="nav-bar-btm">
         <div class="main-logo" onclick="location.href='index.html'">
-        <h1 class="vocTech-logo"> <img src="imgs/VocTech Emblem.png" alt=""> VocTech Academy<br />
-         <span>Senior High School</span></h1>
+        <h1 class="vocTech-logo"> <img src="imgs/VocTech Emblem.png" alt=""> VocTech Academy <br />
+         <span class="sub-txt">Senior High School</span></h1>
          </div>
+         <span id="menu-bar" class="menu-icon"><i class="bi bi-list"></i></span>
+         <span id="menu-exit" class="menu-icon"><i class="bi bi-x"></i></span>
 
-        <ul>
+        <ul id="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="aboutus.html">About</a></li>
             <li><a href="academics.html">Courses</a></li>
             <li><a href="eventsA.html">Events</a></li>
             <li><a href="news.html">News</a></li>
             <li><a href="contact.html">Contacts</a></li>
+
+            <div class="nav-showup">
+                <li><a href="#">ACADEMICS</a></li>
+                <li><a href="#">ADMISSION</a></li>
+                <li><a href="#">STUDENT LIFE</a></li>
+                <li><a href="#">RESEARCH</a></li>
+                <li><a href="#">ALUMNI</a></li>
+            </div>
         </ul>
     </nav>
 </nav>
+
+<!-- Script for Navigation -->
+
+<script>
+const nav = document.getElementById('nav-container');
+window.onscroll = function () { 
+    if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200 ) {
+        nav.classList.add("nav-colored");
+        nav.classList.remove("nav-transparent");
+    } 
+    else {
+        nav.classList.add("nav-transparent");
+        nav.classList.remove("nav-colored");
+    }
+};
+
+const menu = document.querySelector('ul');
+const menuBar = document.getElementById('menu-bar');
+const menuExit = document.getElementById('menu-exit');
+
+menuBar.onclick = function openMenu() {
+    menu.style.right = "0rem";
+    menuExit.style.opacity = "1";
+    menuExit.style.backgroundColor = "var(--clr-primary)"
+    menuBar.style.opacity = "0";
+    menuBar.style.zIndex = "-1";
+}
+
+menuExit.onclick = function closeMenu() {
+    menu.style.right = "-15rem";
+    menuExit.style.opacity = "0";
+    menuBar.style.opacity = "1";
+    menuBar.style.zIndex = "1";
+}
+
+</script>
 
 <!-- All News Section -->
 
 <section class="alln-section">
 
-    <div class="n-heading d-flex justify-content-between align-items-center"><h1 class="my-5">VocTech News</h1></div>
+    <div class="n-heading d-flex justify-content-between align-items-center"><h1 class="py-5">VocTech News</h1></div>
 
     <div class="news-item mb-5">
         <div class="img-item"><img src="imgs/news-section-1.png" alt=""></div>
@@ -98,7 +144,22 @@
 
         <div class="footer-2 footer-item d-flex flex-column align-items-end">
             <div class="f-item-content">
-            <h1>Our Academy</h1>
+            <div class="f-head-wrapper" id="f-head-wrapper-1" data-bs-toggle="collapse" data-bs-target="#colla1">
+                <h1 class="f-heading" id="f-heading-1">Our Academy</h1>
+                <i class="bi bi-chevron-down" id="chevron1"></i>
+                
+            </div>
+
+            <div class="f-item-text">
+            <p><a href="#">Academic</a></p>
+            <p><a href="#">Planning & Administration</a></p>
+            <p><a href="#">Campus Safety</a></p>
+            <p><a href="#">Office of president</a></p>
+            <p><a href="#">Faulty Services</a></p>
+            <p><a href="#">Admin Office</a></p>
+            </div>
+
+            <div class="f-collapse collapse" id="colla1">
             <p><a href="#">Academic</a></p>
             <p><a href="#">Planning & Administration</a></p>
             <p><a href="#">Campus Safety</a></p>
@@ -106,23 +167,47 @@
             <p><a href="#">Faulty Services</a></p>
             <p><a href="#">Admin Office</a></p>
             </div>
+
+            </div>
         </div>
 
         <div class="footer-3 footer-item d-flex flex-column align-items-end">
             <div class="f-item-content">
-            <h1>Admission</h1>
+            <div class="f-head-wrapper" id="f-head-wrapper-2" data-bs-toggle="collapse" data-bs-target="#colla2">
+                <h1 class="f-heading f-heading-2">Admission</h1>
+                <i class="bi bi-chevron-down" id="chevron2"></i>
+                
+            </div>
+
+            <div class="f-item-text">
             <p><a href="#">Admissions</a></p>
             <p><a href="#">Student Life</a></p>
             <p><a href="#">Research</a></p>
             <p><a href="#">Alumni</a></p>
             <p><a href="#">Enrollment</a></p>
             </div>
+
+            <div class="f-collapse collapse" id="colla2">
+            <p><a href="#">Admissions</a></p>
+            <p><a href="#">Student Life</a></p>
+            <p><a href="#">Research</a></p>
+            <p><a href="#">Alumni</a></p>
+            <p><a href="#">Enrollment</a></p>
+            </div>
+
+            </div>
         </div>
 
         <div class="footer-4 footer-item d-flex flex-column align-items-end">
             <div class="f-item-content">
-            <h1>Explore</h1>
-            <p><a href="#">History & Mission</a></p>
+            <div class="f-head-wrapper" id="f-head-wrapper-3" data-bs-toggle="collapse" data-bs-target="#colla3">
+                <h1 class="f-heading f-heading-3">Explore</h1>
+                <i class="bi bi-chevron-down" id="chevron3"></i>
+                
+            </div>
+
+            <div class="f-item-text">
+            <p><a href="aboutus.html">History & Mission</a></p>
             <p><a href="#">Administration</a></p>
             <p><a href="#">Community</a></p>
             <p><a href="#">News Network</a></p>
@@ -130,11 +215,23 @@
             <p><a href="#">Our Campuses</a></p>
             <p><a href="#">Visitor information</a></p>
             </div>
+
+            <div class="f-collapse collapse" id="colla3">
+            <p><a href="aboutus.html">History & Mission</a></p>
+            <p><a href="#">Administration</a></p>
+            <p><a href="#">Community</a></p>
+            <p><a href="#">News Network</a></p>
+            <p><a href="#">Employment</a></p>
+            <p><a href="#">Our Campuses</a></p>
+            <p><a href="#">Visitor information</a></p>
+            </div>
+
+            </div>
         </div>
     </div>
 
         <div class="footer-5">
-            <div class="l-footer d-flex">
+            <div class="l-footer d-flex flex-wrap justify-content-center">
                 <p><a href="#">Privacy & Cookies</a></p>
                 <p><a href="#">Terms & Conditions</a></p>
                 <p><a href="#">Accessibility</a></p>
@@ -144,6 +241,81 @@
             <p class="f-copyright">© 2023 VocTech Academy. All Rights Reserved</p>
         </div>
 </div>
+
+<!-- Footer Script -->
+
+<script>
+
+    const chevs1 = document.getElementById('chevron1');
+    const chevs2 = document.getElementById('chevron2');
+    const chevs3 = document.getElementById('chevron3');
+
+    const accordion1 = document.getElementById('f-head-wrapper-1');
+    const accordion2 = document.getElementById('f-head-wrapper-2');
+    const accordion3 = document.getElementById('f-head-wrapper-3');
+
+// Collapse 1
+
+    chevs1.onclick = function open() {
+
+        if (chevs1.style.rotate == "0deg") {
+            chevs1.style.rotate = "180deg";
+        }   else {
+            chevs1.style.rotate = "0deg";
+        }
+    }
+    
+    accordion1.onclick = function open() {
+
+        if (chevs1.style.rotate == "0deg") {
+            chevs1.style.rotate = "180deg";
+        }   else {
+            chevs1.style.rotate = "0deg";
+        }
+    }
+
+// Collapse 2
+
+    chevs2.onclick = function open() {
+
+        if (chevs2.style.rotate == "0deg") {
+            chevs2.style.rotate = "180deg";
+        }   else {
+            chevs2.style.rotate = "0deg";
+        }
+    }
+    
+    accordion2.onclick = function open() {
+
+        if (chevs2.style.rotate == "0deg") {
+            chevs2.style.rotate = "180deg";
+        }   else {
+            chevs2.style.rotate = "0deg";
+        }
+
+    }
+
+// Collapse 3
+
+    chevs3.onclick = function open() {
+
+        if (chevs3.style.rotate == "0deg") {
+            chevs3.style.rotate = "180deg";
+        }   else {
+            chevs3.style.rotate = "0deg";
+        }
+    }
+    
+    accordion3.onclick = function open() {
+
+        if (chevs3.style.rotate == "0deg") {
+            chevs3.style.rotate = "180deg";
+        }   else {
+            chevs3.style.rotate = "0deg";
+        }
+    }
+
+</script>
 
 
 </body>

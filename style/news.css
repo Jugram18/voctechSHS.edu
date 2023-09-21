@@ -26,6 +26,17 @@ html, body {
     font-family: var(--font-universal);
 }
 
+
+/* Navigation Section */
+#nav-container {
+    position: fixed;
+    transition: 300ms;
+    z-index: 999999 !important;
+    max-width: 100vw;
+    background: var(--clr-primary);
+    filter: drop-shadow(0px 0 5px rgba(0, 0, 0, 0.6));
+}
+
 /* All News Section */
 .alln-section {
     max-width: 100vw;
@@ -71,92 +82,52 @@ html, body {
     }
 }
 
-/* Footer Section */
-.footer-container {
-    max-width: 100vw;
-    min-height: 539px;
-    background: var(--clr-primary);
-    padding-inline: 18rem;
-    padding-block: 60px 0;
-    color: white;
- }
-
- .footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 4fr));
-    gap: 2rem;
- }
-
- .footer-1 div .f-header {
-    font-size: 18px;
-    opacity: 1 !important;
- }
-
- .footer-1 div .p-footer {
-    opacity: .8;
- }
-
- .footer-1 { 
-
-    & h1 {
-    padding-block: 0 20px;
-    font-size: 24px;
+/* Desktop/Laptop Layout */
+@media screen and (min-width: 1024px) and (max-width: 1650px) {
+    .alln-section {
+        padding-inline: 8rem;
+        padding-block: 15rem 0;
     }
 
-    & p {
-    padding-block: 0 48px;
- }
- }
-
- .footer-item {
-
-    & h1 {
-    font-size: 24px;
-    padding-block: 0 20px;
-    
+    .n-heading h1 {
+        padding-block: 2rem 0 !important;
     }
 
-    & p {
-        opacity: .8;
-        padding-block: 0 18px;
+    .news-item {
+        margin-block: 1rem;
+    }
+}
+
+/* Tablet Layout */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .alln-section {
+        padding-inline: 1rem;
+        padding-block: 15rem 0;
     }
 
-    & a {
-        text-decoration: none;
-        color: white;
+    .n-heading h1 {
+        padding-block: 2rem 0 !important;
     }
 
-    & p:hover {
-        opacity: 1;
+    .news-item {
+        margin-block: 1rem;
     }
- 
- }
+}
 
- .footer-5 {
-    display: flex;
-    justify-content: space-between;
-    border-top: 1px solid rgba(255, 255, 255, 0.6);
-    padding-block: 30px 10px;
-
-    & .f-copyright {
-        opacity: .8;
-    }
- }
-
- .l-footer {
-
-    & p {
-    padding-right: 40px;
-    font-size: 14px;
-    opacity: .8;
+/* Mobile Layout */
+@media screen and (max-width: 767px) {
+    .alln-section {
+        padding-inline: 1rem;
+        padding-block: 10rem 0;
     }
 
-    & a {
-        text-decoration: none;
-        color: white;
+    .n-heading h1 {
+        padding-block: 2rem 0 !important;
     }
 
-    & p:hover {
-        opacity: 1;
+    .news-item {
+        margin-block: 1rem;
     }
- }
+
+
+}
