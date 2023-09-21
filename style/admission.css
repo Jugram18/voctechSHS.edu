@@ -84,11 +84,11 @@ html, body {
     color: white;
     background: var(--clr-primary);
     text-align: center;
-    gap: 8rem;
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1;
+    gap: 7rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
 }
+
 
 /* Application Process Section */
 
@@ -169,11 +169,91 @@ html, body {
     }
 }
 
-/* Desktop Layout */
+/* Desktop/Laptop Layout */
 
-@media screen and (min-width: 1024px) and (max-width: 1650px) {}
+@media screen and (min-width: 1024px) and (max-width: 1650px) {
+    /* Admin Desktop/Laptop Layout */
+    .admin-container {
+        padding: 0 8rem 4rem;
+    }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {}
+    /* Details Desktop Layout */
+    .details-container {
+        padding-inline: 8rem;
+    }
+
+    /* Admin Column 3 Desktop Layout */
+    .ad-col3 {
+        padding: 5rem 8rem;
+    }
+
+    /* Application Process Desktop Layout */
+    .ad-process-container {
+        padding-inline: 8rem;
+    }
+
+    .ad-process-grid {
+        grid-gap: 0;
+    }
+
+
+    .ad-item {
+        padding-bottom: 2rem;
+    }
+
+    /* On site Application Desktop Layout */
+    .os-container {
+        padding-inline: 8rem;
+        padding-block: 3rem;
+    }
+}
+
+
+/* Tablet Layout */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Admin Tablet Layout */
+    .admin-container {
+        padding: 0 1rem 2rem;
+    }
+
+    .admin-container .ad-header {
+        font-size: 72px;
+    }
+
+    /* Details Tablet Layout */
+    .details-container {
+        padding-inline: 1rem;
+    }
+
+    /* Admin Col 3 Tablet Layout */
+    .ad-col3 {
+        padding-inline: 1rem;
+        padding-block: 5rem;
+    }
+
+    /* Application Process Tablet Layout */
+    .ad-process-container {
+        padding-inline: 1rem;
+    }
+
+    .ad-process-grid {
+        grid-gap: 0;
+    }
+
+    .num {
+        padding-inline: 1.5rem!important;
+    }
+
+    /* On site Application Tablet Layout */
+    .os-container {
+        padding-inline: 1rem;
+        padding-block: 1rem;
+    }
+
+}
+
+
+
 
 /* Mobile Layout */
 @media screen and (max-width: 767px) {
