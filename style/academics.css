@@ -1,14 +1,15 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 :root {
     /* Color Style */
     --clr-primary: #00113F;
-    --clr-primary-deep: #000d31;
     --clr-secondary: #7FFFD9;
     --clr-tertiary: #3B58A7;
+    --clr-primary-deep: #000b29;
 
     --clr-1card: #00113F;
     --clr-2card: #213673;
@@ -18,13 +19,8 @@
     --clr-btn: #263F85;
 
     /* Font style */
-    --font-universal: tahoma, sans-serif;
-}
-
-html, body {
-    position: relative;
-    overflow-x: hidden;
-    font-family: var(--font-universal);
+    --font-universal: Trebuchet MS, sans-serif;
+    --font-paragraph: Verdana;
 }
 
 /* Navigation Section */
@@ -36,137 +32,6 @@ html, body {
     background: var(--clr-primary);
     filter: drop-shadow(0px 0 5px rgba(0, 0, 0, 0.6));
 
-}
-
-.nav-colored {
-    background-color: var(--clr-primary);
-    filter: drop-shadow(6px 1px 10px rgba(0, 0, 0, 0.6));
-}
-
-.nav-transparent {
-    background-color:transparent;
-}
-
-#nav-bar-top {
-    padding: 1rem 18rem 1rem 18rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.side-nav-left {
-    font-size: 15px;
-
-    & a {
-        color: white;
-        text-decoration: none;
-        padding-right: 3rem;
-        position: relative;
-    }
-
-    & a:after {
-        content: '';
-        background: white;
-        width: 0;
-        height: 2px;
-        display: block;
-        position: absolute;
-        left: 0;
-        transition: 300ms;
-
-    }
-
-    & a:hover::after {
-        width: 50%;
-    }
-}
-
-.side-nav-right {
-    font-size: 16px;
-
-    & span {
-        margin-right: 16px;
-    }
-
-    & a {
-        color: white;
-        text-decoration: none;
-        padding-left: 3rem;
-    }
-}
-
-/* Navigation bottom */
-#nav-bar-btm {
-    background: transparent;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-inline: 18rem;
-    padding-block: 1rem 0;
-    width: 100vw;
-    z-index: 9999 !important;
-    position: relative;
-
-    & h1 {
-        color: white;
-        font-size: 32px;
-
-        & span {
-            font-size: 15px;
-            font-style: italic;
-            padding-left: 4rem;
-            position: relative;
-            bottom: 1.5rem;
-        }
-    }
-
-    & ul {
-        list-style: none;
-    }
-
-    & li {
-        padding-inline: 20px;
-        display: inline-block;
-        
-    }
-
-    & a {
-        text-decoration: none;
-        color: white;
-        transition: 250ms;
-
-        &:hover::after {
-            width: 100%;
-        }
-    }
-
-    & a::after {
-        content: '';
-        background: white;
-        position: relative;
-        display: block;
-        width: 0;
-        height: 2px;
-        transition: 250ms;
-    }
-
-}
-
-#nav-bar-btm::before {
-    content: '';
-    height: .5px;
-    background: white;
-    position: absolute;
-    display: block;
-    inset: 0 18rem 0 18rem;
-    opacity: .5 
-}
-
-#nav-bar-btm .main-logo {
-    cursor: pointer;
 }
 
  /* Academics Hero Section */
@@ -213,7 +78,7 @@ html, body {
     color: white;
     padding: 4rem 18rem 4rem 18rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
 }
 
 .ict-header {
@@ -245,10 +110,6 @@ html, body {
     gap: 3rem
 }
 
-.ict-content .ict-txt {
-    line-height: 2;
-}
-
 /* Industrial Section */
 
 .industrial-arts-container {
@@ -261,6 +122,7 @@ html, body {
     font-weight: bold;
     color: var(--clr-primary);
     position: relative;
+    max-width: 100%;
 }
 
 .industrial-arts-container h1::after {
@@ -286,14 +148,14 @@ html, body {
 }
 
 .ia-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
     text-align: center;
     gap: 5rem;
     padding-block: 5rem;
 }
 
 /* Academics Section */
-
 .as-container {
     max-width: 100vw;
     min-height: 50vh;
@@ -304,6 +166,7 @@ html, body {
 .as-container h1 {
     font-weight: bold;
     color: var(--clr-primary);
+    position: relative;
 }
 
 .as-container h1::after {
@@ -328,99 +191,172 @@ html, body {
     background: var(--clr-primary);
     color: white;
     padding: 2rem 5rem;
-
 }
 
 .as-grid-item p {
     padding: 2rem 5rem;
 }
 
-/* Footer Section */
-.footer-container {
-    max-width: 100vw;
-    min-height: 539px;
-    background: var(--clr-primary);
-    padding-inline: 18rem;
-    padding-block: 60px 0;
-    color: white;
- }
+/* Desktop/Laptop Layout */
 
- .footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 4fr));
-    gap: 2rem;
- }
-
- .footer-1 div .f-header {
-    font-size: 18px;
-    opacity: 1 !important;
- }
-
- .footer-1 div .p-footer {
-    opacity: .8;
- }
-
- .footer-1 { 
-
-    & h1 {
-    padding-block: 0 20px;
-    font-size: 24px;
+@media screen and (min-width: 1024px) and (max-width: 1650px) {
+    /* Academics Hero Tablet Layout */
+    .acad-container {
+        padding: 0 8rem 5rem;
     }
 
-    & p {
-    padding-block: 0 48px;
- }
- }
-
- .footer-item {
-
-    & h1 {
-    font-size: 24px;
-    padding-block: 0 20px;
-    
+    /* Info Tablet Layout */
+    .acad-info-container {
+        padding-inline: 8rem;
     }
 
-    & p {
-        opacity: .8;
-        padding-block: 0 18px;
+    /* ICT Tablet Layout */
+    .ict-container {
+        padding-inline: 8rem;
     }
 
-    & a {
-        text-decoration: none;
-        color: white;
+    .ia-grid h2 {
+        font-size: 22px;
+        font-weight: bold;
     }
 
-    & p:hover {
-        opacity: 1;
-    }
- 
- }
-
- .footer-5 {
-    display: flex;
-    justify-content: space-between;
-    border-top: 1px solid rgba(255, 255, 255, 0.6);
-    padding-block: 30px 10px;
-
-    & .f-copyright {
-        opacity: .8;
-    }
- }
-
- .l-footer {
-
-    & p {
-    padding-right: 40px;
-    font-size: 14px;
-    opacity: .8;
+    /* Industrial Tablet Layout */
+    .industrial-arts-container {
+        padding-inline: 8rem;
     }
 
-    & a {
-        text-decoration: none;
-        color: white;
+    /* Academics Tablet Layout */
+    .as-container {
+        padding-inline: 8rem;                            
     }
 
-    & p:hover {
-        opacity: 1;
+    .as-container h2 {
+        font-size: 20px;
     }
- }
+}
+
+/*  Tablet Layout  */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+     /* Academics Tablet Layout  */
+     .acad-container {
+        padding: 0 1rem 4rem;
+     }
+
+     /* Info Tablet Layout */
+     .acad-info-container {
+        padding-inline: 1rem;
+     }
+
+     .acad-info-container {
+        min-width: 100%;
+     }
+
+     /* ICT Tablet Layout */
+     .ict-container {
+        padding-inline: 1rem;
+     }
+
+     /* Industrial Tablet Layout */
+     .industrial-arts-container {
+        padding-inline: 1rem;
+     }
+
+     /* Academics Tablet Layout */
+     .as-container {
+        padding-inline: 1rem;
+     }
+}
+
+
+
+/* Mobile Layout */
+@media screen and (max-width: 767px) {
+
+/* Academics Mobile Layout */
+    .acad-container {
+        padding: 0 1rem 5rem;
+    }
+
+    .acad-container .acad-header {
+        font-size: 56px;
+    }
+
+    /* Info Mobile Layout */
+    .acad-info-container {
+        padding-inline: 1rem;
+        padding-block: 4rem 0;
+    }
+
+    .acad-info-container h1 {
+        font-size: 32px;
+    }
+
+    .acad-info-container video {
+        height: 413px;
+        min-width: 100%;
+    }
+
+    /* ICT Mobile Layout */
+
+    .ict-container {
+        padding-inline: 1rem;
+    }
+
+    .ict-header {
+        margin-bottom: 3rem;
+        padding-inline: 0;
+    }
+
+    .ict-header h1 {
+        font-size: 24px;
+    }
+
+    .ict-txt h1 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    /* Infustrial Arts Mobile Layout */
+
+    .industrial-arts-container {
+        padding-inline: 1rem;
+    }
+
+    .ia-item h2 {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .ia-grid {
+        gap: 2rem;
+    }
+
+    .industrial-arts-container h1::before {
+        display: none;
+    }
+
+    .industrial-arts-container h1::after {
+        inset: 3rem 0 0 0;
+        width: 100%;
+    }
+
+    /* Academics Mobile Layout */
+
+    .as-container {
+        padding-inline: 1rem;
+    }
+
+    .as-container h1::after {
+        width: 100%;
+    }
+
+
+
+    .as-grid-item div {
+        padding-inline: 1rem;
+    }
+
+    .as-grid-item p {
+        padding-inline: 1rem;
+    }
+}
