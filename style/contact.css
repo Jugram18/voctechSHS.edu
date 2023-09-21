@@ -159,8 +159,6 @@ form .c-btn:hover {
 }
 
 
-
-
 /* Tablet Layout */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 
@@ -201,9 +199,6 @@ form .c-btn:hover {
         padding: 5rem 1rem;
     }
 }
-
-
-
 
 /* Mobile Layout */
 @media screen and (max-width: 767px) {
