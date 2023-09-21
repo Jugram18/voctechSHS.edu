@@ -148,8 +148,53 @@ html, body {
 
 /* Desktop Layout */
 
-@media screen and (max-width: 1024px) and (max-width: 1650px) {
-    
+@media screen and (min-width: 1024px) and (max-width: 1650px) {
+
+    /* About Desktop Layout */
+
+    .abt-container {
+        padding: 0 8rem 5rem;
+    }
+
+    /* History Desktop Layout */
+
+    .h-container {
+        padding-inline: 8rem;
+    }
+
+    /* VMG Desktop Layout */
+
+    .vmg-container {
+        padding-inline: 8rem;
+        padding-block: 2rem;
+    }
+
+    .vmg-grid {
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
+    }
+
+    .vmg-grid p {
+        font-size: 14px;
+    }
+
+    /* Campus,G, I Desktop Layout */
+
+    .a-item {
+        gap: 2rem;
+    }
+
+    .a-campus-wrapper {
+        padding-left: 8rem;
+    }
+
+    .a-graduation-wrapper {
+        padding-right: 8rem;
+    }
+
+    .a-training-wrapper {
+        padding-left: 8rem;
+    }
 }
 
 /* Tablet Layout */
@@ -250,6 +295,10 @@ html, body {
     }
 
     /* Partnership Mobile Layout */
+
+    .p-container {
+        padding-block: 3rem;
+    }
 
     .p-grid img {
         width: 100px;
