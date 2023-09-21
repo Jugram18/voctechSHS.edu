@@ -128,3 +128,61 @@ html, body {
     max-width:700px;    
 }
 }
+
+/* Desktop/Laptop Layout */
+@media screen and (min-width: 1024px) and (max-width: 1650px) {
+
+    /* career Hero Desktop Layout */
+    .career-container {
+        padding: 0 8rem 4rem;
+    }
+        
+    .career-container .ca-header{
+        font-size: 72px;
+    }
+        
+    /* Explore Desktop Layout */
+    .ca-explore-container {
+        padding-inline: 8rem;
+    }  
+}
+
+
+
+/* Tablet Layout  */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /* career Hero Tablet Layout */
+    .career-container {
+        padding: 0 1rem 4rem;
+    }
+    
+    .career-container .ca-header{
+        font-size: 72px;
+    }
+    
+    /* Explore Tablet Layout */
+    .ca-explore-container {
+        padding-inline: 1rem;
+    }
+}
+
+
+
+/* Mobile Layout */
+@media screen and (max-width: 767px) {
+
+    /* career Hero Mobile Layout */
+    .career-container {
+        padding: 0 1rem 4rem;
+    }
+
+    .career-container .ca-header{
+        font-size: 56px;
+    }
+
+    /* Explore Mobile Layout */
+    .ca-explore-container {
+        padding-inline: 1rem;
+    }
+}
