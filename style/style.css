@@ -182,17 +182,76 @@ html p, a {
     position: absolute;
     display: block;
     inset: 0 18rem 0 18rem;
-    opacity: .5 
+    opacity: .5; 
 }
 
 #nav-bar-btm .main-logo {
     cursor: pointer;
 }
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+  } 
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 200px;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  #nav-bar-btm .dropdown-content a {
+    color: var(--clr-primary);
+    padding: 12px 2rem !important;
+    text-decoration: none;
+    display: block;
+  }
 
-/* #nav-bar-btm .main-logo img {
-    width: 70px;
+  #nav-bar-btm .drop-btn::after {
+    all: unset !important;
+  }
+
+  #nav-bar-btm .dropdown:hover .drop-btn {
+    color: var(--clr-primary) !important; 
+    transition: unset !important;
+  }
+
+  .dropdown:hover .btn-aff{
+    background: #f1f1f1 !important;
+    transition: unset !important;
+    cursor: pointer;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: var(--clr-primary);
+    color: #f1f1f1 !important;
+}
+
+.dropdown-collapse {
+    display: none;
+}
+
+/* .dropdown i {
+    transition: 300ms;
 } */
 
+.dropdown:hover .chevy {
+    color: var(--clr-primary);
+    transform: rotate(180deg) !important;
+
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-hide {
+    display: none !important;
+}
+  
 /* Hero Section */
 .hero-section {
     max-width: 100vw;
@@ -367,7 +426,7 @@ html p, a {
 }
 
 /* Advertisement Section */
-.advert-container {
+/* .advert-container {
     background-image: url("../imgs/CTA-bg.png");
     max-width: 100vw;
     min-height: 60vh;
@@ -410,6 +469,18 @@ html p, a {
 
 #ad-btn a:hover {
     background: var(--clr-2card);
+} */
+
+
+/* Achievements Section */
+.achieve-container {
+    padding-inline: 18rem;
+    max-width: 100vw;
+    padding-block: 0 3rem;
+}
+
+.achieve-items img {
+    height: 500px;
 }
 
 /* News & Update Section */
@@ -923,6 +994,13 @@ html, body {
     font-size: 24px;
 }
 
+/* Achievements Desktop Layout */
+
+.achieve-container {
+    padding-inline: 8rem;
+    padding-block: 5rem;
+}
+
 /* News & Update Desktop Layout */
 
 #news-container {
@@ -1112,6 +1190,13 @@ html, body {
         padding-inline: 1rem;
         margin-bottom: 0;
     }
+
+    /* Achievements Tablet Layout */
+
+    .achieve-container {
+        padding-inline: 0;
+        padding-block: 0;
+    }
     
     .advert-container .advert {
         margin: auto;
@@ -1295,6 +1380,8 @@ html, body {
         padding: 40px;
         top: 5rem;
         transition: 250ms;
+        overflow: scroll;
+        height: 80vh;
     }
 
     ul li {
@@ -1335,6 +1422,45 @@ html, body {
         padding-inline: 1rem;
     }
 
+    #nav-bar-btm .dropdown-content {
+        display: none;
+    }
+
+    .dropdown-collapse {
+        text-align: left;
+        font-size: 15px;
+    }
+
+    .dropdown-collapse a {
+        display: block;
+        padding-block: .8rem;
+        margin-inline: 1rem 0;
+    }
+
+    .dropdown-collapse a:after {
+        display: none !important;
+    }
+    
+  .nav-hide {
+    display: block !important;
+  }
+
+  .chevy {
+    position: absolute;
+  }
+
+  .dropdown {
+    display: none;
+  }
+
+  .nav-hide a::after {
+    display: none !important;
+  }
+
+  .dropdown-collapse {
+    display: block;
+    background: var(--clr-primary-deep);
+  }
 
 /* Hero Mobile Layout */ 
 
@@ -1370,13 +1496,19 @@ html, body {
 }
 
 /* Advertisement Mobile Layout */
-.advert-container {
+/* .advert-container {
     padding-inline: 1rem;
     margin-bottom: 0;
 }
 
 .advert-container .advert {
     margin: auto;
+} */
+
+/* Achievement Section */
+.achieve-container {
+    padding-inline: 0;
+    padding-block: 0;
 }
 
 /* News & Update Mobile Layout */

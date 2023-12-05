@@ -41,8 +41,30 @@
          <span id="menu-exit" class="menu-icon"><i class="bi bi-x"></i></span>
 
         <ul id="menu">
+
             <li><a href="index.html">Home</a></li>
-            <li><a href="aboutus.html">About</a></li>
+            <li class="nav-hide" data-bs-toggle="collapse" data-bs-target="#drop-collapse"><a href="#" id="nav-trigger">About <i class="bi bi-chevron-down" id="nav-chev"></i></a></li>
+            <!-- Dropdown for Mobile -->
+            <div class="dropdown-collapse collapse" id="drop-collapse">
+                <a href="#">Vision</a>
+                <a href="#">Mission</a>
+                <a href="#">Core Values</a>
+                <a href="#">Faculty and Staff</a>
+                <a href="#">Rooms & Offices</a>
+            </div>
+
+            <!-- Dropdown for Desktop -->
+            <div class="dropdown">
+            <li class="btn-aff"><a href="aboutus.html" class="drop-btn"> About</a> <i class="bi bi-chevron-down chevy"></i> </li>
+            <div class="dropdown-content">
+                <a href="#">Vision</a>
+                <a href="#">Mission</a>
+                <a href="#">Core Values</a>
+                <a href="#">Faculty and Staff</a>
+                <a href="#">Rooms & Offices</a>
+            </div>
+            </div>
+
             <li><a href="academics.html">Courses</a></li>
             <li><a href="eventsA.html">Events</a></li>
             <li><a href="news.html">News</a></li>
@@ -93,7 +115,22 @@ menuExit.onclick = function closeMenu() {
     menuBar.style.zIndex = "1";
 }
 
+
+let navt = document.getElementById('nav-trigger');
+let navc = document.getElementById('nav-chev');
+
+navt.onclick = function upchev() {
+    if (navc.style.transform == 'rotate(0)') {
+        navc.style.transform = 'rotate(180deg)';
+    } else {
+        navc.style.transform = 'rotate(0)';
+    }
+}   
+
+
 </script>
+
+
 
 <!-- Hero Section-->
     <section class="hero-section">
@@ -163,7 +200,7 @@ menuExit.onclick = function closeMenu() {
     </section>
 
 <!-- Advertisement Section  -->
-    <div class="advert-container">
+    <!-- <div class="advert-container">
         
         <div class="advert">
         <h1>VocTech Offers 100% Free Tuition</h1>
@@ -174,7 +211,41 @@ menuExit.onclick = function closeMenu() {
         <div id="ad-btn"><a href="#"> Apply for Admission </a></div>
         </div>
 
+    </div> -->
+
+<!-- Achievements Section -->
+<section class="achieve-container">
+<div id="achievements" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#achievements" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#achievements" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#achievements" data-bs-slide-to="2"></button>
     </div>
+  
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item achieve-items active">
+        <img src="imgs/about-bg.png" alt="Los Angeles" class="d-block w-100">
+      </div>
+      <div class="carousel-item achieve-items">
+        <img src="imgs/Admission-img.png" alt="Chicago" class="d-block w-100">
+      </div>
+      <div class="carousel-item achieve-items">
+        <img src="imgs/career-bg.png" alt="New York" class="d-block w-100">
+      </div>
+    </div>
+                                                                        
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#achievements" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#achievements" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+</section>
 
 <!-- News & Update Section -->
 <div id="news-container">

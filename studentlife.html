@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style/studentlife.css">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Student Life</title>
+</head>
+<body>
+
+     <!-- Navigation Section -->
+    
+<!-- Nav top -->
+<nav id="nav-container">
+    <nav id="nav-bar-top">
+        <div class="side-nav-left">
+            <a href="academics.html">ACADEMICS </a>
+            <a href="admission.html">ADMISSION </a>
+            <a href="#">STUDENT LIFE </a>
+            <a href="#">RESEARCH </a>
+            <a href="#">ALUMNI </a>
+        </div>
+
+        <div class="side-nav-right">
+            <a href="#"> <span><i class="bi bi-envelope-fill"></i></span>voctechofficial@gmail.com </a>
+            <a href="#"><span><i class="bi bi-telephone-fill"></i></span>(032) 123 - 4567</a>
+        </div>
+    </nav>
+
+<!-- Nav bottom -->
+    <nav id="nav-bar-btm">
+        <div class="main-logo" onclick="location.href='index.html'">
+        <h1 class="vocTech-logo"> <img src="imgs/VocTech Emblem.png" alt=""> VocTech Academy <br />
+         <span class="sub-txt">Senior High School</span></h1>
+         </div>
+         <span id="menu-bar" class="menu-icon"><i class="bi bi-list"></i></span>
+         <span id="menu-exit" class="menu-icon"><i class="bi bi-x"></i></span>
+
+        <ul id="menu">
+
+            <li><a href="index.html">Home</a></li>
+            <li class="nav-hide" data-bs-toggle="collapse" data-bs-target="#drop-collapse"><a href="#" id="nav-trigger">About <i class="bi bi-chevron-down" id="nav-chev"></i></a></li>
+            <!-- Dropdown for Mobile -->
+            <div class="dropdown-collapse collapse" id="drop-collapse">
+                <a href="#">Vision</a>
+                <a href="#">Mission</a>
+                <a href="#">Core Values</a>
+                <a href="#">Faculty and Staff</a>
+                <a href="#">Rooms & Offices</a>
+            </div>
+
+            <!-- Dropdown for Desktop -->
+            <div class="dropdown">
+            <li class="btn-aff"><a href="aboutus.html" class="drop-btn"> About</a> <i class="bi bi-chevron-down chevy"></i> </li>
+            <div class="dropdown-content">
+                <a href="#">Vision</a>
+                <a href="#">Mission</a>
+                <a href="#">Core Values</a>
+                <a href="#">Faculty and Staff</a>
+                <a href="#">Rooms & Offices</a>
+            </div>
+            </div>
+
+            <li><a href="academics.html">Courses</a></li>
+            <li><a href="eventsA.html">Events</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contacts</a></li>
+
+            <div class="nav-showup">
+                <li><a href="#">ACADEMICS</a></li>
+                <li><a href="#">ADMISSION</a></li>
+                <li><a href="#">STUDENT LIFE</a></li>
+                <li><a href="#">RESEARCH</a></li>
+                <li><a href="#">ALUMNI</a></li>
+            </div>
+        </ul>
+    </nav>
+</nav>
+
+<!-- Script for Navigation -->
+<script>
+const nav = document.getElementById('nav-container');
+window.onscroll = function () { 
+    if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200 ) {
+        nav.classList.add("nav-colored");
+        nav.classList.remove("nav-transparent");
+    } 
+    else {
+        nav.classList.add("nav-transparent");
+        nav.classList.remove("nav-colored");
+    }
+};
+
+const menu = document.querySelector('ul');
+const menuBar = document.getElementById('menu-bar');
+const menuExit = document.getElementById('menu-exit');
+
+menuBar.onclick = function openMenu() {
+    menu.style.right = "0rem";
+    menuExit.style.opacity = "1";
+    menuExit.style.backgroundColor = "var(--clr-primary)"
+    menuBar.style.opacity = "0";
+    menuBar.style.zIndex = "-1";
+}
+
+menuExit.onclick = function closeMenu() {
+    menu.style.right = "-15rem";
+    menuExit.style.opacity = "0";
+    menuBar.style.opacity = "1";
+    menuBar.style.zIndex = "1";
+}
+
+</script>
+
+<!-- Student Life Section -->
+
+<div class="sl-container">
+    <h1 class="text-center">Student Life</h1>
+    <div class="sl-grid">
+        <div class="sl-img"><img src="imgs/academics-bg.png" alt=""></div>
+        <div class="sl-content d-flex flex-column justify-content-center">
+            <h1>Admissions</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quae nam totam cum quis. Saepe ab natus eveniet? Ratione, illo.</p>
+        </div>
+
+        <div class="sl-img"><img src="imgs/academics-bg.png" alt=""></div>
+        <div class="sl-content d-flex flex-column justify-content-center">
+            <h1>Residence</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quae nam totam cum quis. Saepe ab natus eveniet? Ratione, illo.</p>
+        </div>
+
+        <div class="sl-content d-flex flex-column justify-content-center">
+            <h1>Programs</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quae nam totam cum quis. Saepe ab natus eveniet? Ratione, illo.</p>
+        </div>
+        <div class="sl-img"><img src="imgs/academics-bg.png" alt=""></div>
+
+        <div class="sl-content d-flex flex-column justify-content-center">
+            <h1>Clubs & Activities</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quae nam totam cum quis. Saepe ab natus eveniet? Ratione, illo.</p>
+        </div>
+        <div class="sl-img"><img src="imgs/academics-bg.png" alt=""></div>
+    </div>
+</div>
+
+<!-- Percent Section -->
+
+<div class="percent-container">
+    
+</div>
+
+
+<!-- Footer Section -->
+
+<div class="footer-container">
+    <div class="footer-grid">
+        <div class="footer-1 footer-item-first">
+            <div><h1>VocTech Academy</h1><p> <span class="f-header">Location:</span><br><span class="p-footer">Cebu South Road <br>Basak, San Nicolas</p></div>
+
+            <div><p> <span class="f-header">Office Hours:</span><br> <span class="p-footer">8:00 am - 5:00 pm</span></p></div>
+
+            <div><p> <span class="f-header">Telephone: </span><br> <span class="p-footer">(032) 401-0531</span></p></div>
+
+            <div><p> <span class="f-header">Email:</span><br> <span class="p-footer">voctechseniorhighschool@gmail.com</span></p></div>
+        </div>
+
+        <div class="footer-2 footer-item d-flex flex-column align-items-end">
+            <div class="f-item-content">
+            <div class="f-head-wrapper" id="f-head-wrapper-1" data-bs-toggle="collapse" data-bs-target="#colla1">
+                <h1 class="f-heading" id="f-heading-1">Our Academy</h1>
+                <i class="bi bi-chevron-down" id="chevron1"></i>
+                
+            </div>
+
+            <div class="f-item-text">
+            <p><a href="#">Academic</a></p>
+            <p><a href="#">Planning & Administration</a></p>
+            <p><a href="#">Campus Safety</a></p>
+            <p><a href="#">Office of president</a></p>
+            <p><a href="#">Faulty Services</a></p>
+            <p><a href="#">Admin Office</a></p>
+            </div>
+
+            <div class="f-collapse collapse" id="colla1">
+            <p><a href="#">Academic</a></p>
+            <p><a href="#">Planning & Administration</a></p>
+            <p><a href="#">Campus Safety</a></p>
+            <p><a href="#">Office of the President</a></p>
+            <p><a href="#">Faulty Services</a></p>
+            <p><a href="#">Admin Office</a></p>
+            </div>
+
+            </div>
+        </div>
+
+        <div class="footer-3 footer-item d-flex flex-column align-items-end">
+            <div class="f-item-content">
+            <div class="f-head-wrapper" id="f-head-wrapper-2" data-bs-toggle="collapse" data-bs-target="#colla2">
+                <h1 class="f-heading f-heading-2">Admission</h1>
+                <i class="bi bi-chevron-down" id="chevron2"></i>
+                
+            </div>
+
+            <div class="f-item-text">
+            <p><a href="#">Admissions</a></p>
+            <p><a href="#">Student Life</a></p>
+            <p><a href="#">Research</a></p>
+            <p><a href="#">Alumni</a></p>
+            <p><a href="#">Enrollment</a></p>
+            </div>
+
+            <div class="f-collapse collapse" id="colla2">
+            <p><a href="#">Admissions</a></p>
+            <p><a href="#">Student Life</a></p>
+            <p><a href="#">Research</a></p>
+            <p><a href="#">Alumni</a></p>
+            <p><a href="#">Enrollment</a></p>
+            </div>
+
+            </div>
+        </div>
+
+        <div class="footer-4 footer-item d-flex flex-column align-items-end">
+            <div class="f-item-content">
+            <div class="f-head-wrapper" id="f-head-wrapper-3" data-bs-toggle="collapse" data-bs-target="#colla3">
+                <h1 class="f-heading f-heading-3">Explore</h1>
+                <i class="bi bi-chevron-down" id="chevron3"></i>
+                
+            </div>
+
+            <div class="f-item-text">
+            <p><a href="aboutus.html">History & Mission</a></p>
+            <p><a href="#">Administration</a></p>
+            <p><a href="#">Community</a></p>
+            <p><a href="#">News Network</a></p>
+            <p><a href="#">Employment</a></p>
+            <p><a href="#">Our Campuses</a></p>
+            <p><a href="#">Visitor information</a></p>
+            </div>
+
+            <div class="f-collapse collapse" id="colla3">
+            <p><a href="aboutus.html">History & Mission</a></p>
+            <p><a href="#">Administration</a></p>
+            <p><a href="#">Community</a></p>
+            <p><a href="#">News Network</a></p>
+            <p><a href="#">Employment</a></p>
+            <p><a href="#">Our Campuses</a></p>
+            <p><a href="#">Visitor information</a></p>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+        <div class="footer-5">
+            <div class="l-footer d-flex flex-wrap justify-content-center">
+                <p><a href="#">Privacy & Cookies</a></p>
+                <p><a href="#">Terms & Conditions</a></p>
+                <p><a href="#">Accessibility</a></p>
+                <p><a href="#">Contact Us</a></p>
+            </div>
+
+            <p class="f-copyright">© 2023 VocTech Academy. All Rights Reserved</p>
+        </div>
+</div>
+
+<!-- Footer Script -->
+
+<script>
+
+    const chevs1 = document.getElementById('chevron1');
+    const chevs2 = document.getElementById('chevron2');
+    const chevs3 = document.getElementById('chevron3');
+
+    const accordion1 = document.getElementById('f-head-wrapper-1');
+    const accordion2 = document.getElementById('f-head-wrapper-2');
+    const accordion3 = document.getElementById('f-head-wrapper-3');
+
+// Collapse 1
+
+    chevs1.onclick = function open() {
+
+        if (chevs1.style.rotate == "0deg") {
+            chevs1.style.rotate = "180deg";
+        }   else {
+            chevs1.style.rotate = "0deg";
+        }
+    }
+    
+    accordion1.onclick = function open() {
+
+        if (chevs1.style.rotate == "0deg") {
+            chevs1.style.rotate = "180deg";
+        }   else {
+            chevs1.style.rotate = "0deg";
+        }
+    }
+
+// Collapse 2
+
+    chevs2.onclick = function open() {
+
+        if (chevs2.style.rotate == "0deg") {
+            chevs2.style.rotate = "180deg";
+        }   else {
+            chevs2.style.rotate = "0deg";
+        }
+    }
+    
+    accordion2.onclick = function open() {
+
+        if (chevs2.style.rotate == "0deg") {
+            chevs2.style.rotate = "180deg";
+        }   else {
+            chevs2.style.rotate = "0deg";
+        }
+
+    }
+
+// Collapse 3
+
+    chevs3.onclick = function open() {
+
+        if (chevs3.style.rotate == "0deg") {
+            chevs3.style.rotate = "180deg";
+        }   else {
+            chevs3.style.rotate = "0deg";
+        }
+    }
+    
+    accordion3.onclick = function open() {
+
+        if (chevs3.style.rotate == "0deg") {
+            chevs3.style.rotate = "180deg";
+        }   else {
+            chevs3.style.rotate = "0deg";
+        }
+    }
+
+</script>
+
+    
+    
+</body>
+</html>
